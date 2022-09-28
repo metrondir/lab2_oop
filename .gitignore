@@ -1,4 +1,4 @@
-
+.vs/
 # Compiled Object files
 *.slo
 *.lo
@@ -19,5 +19,5 @@ Release
 *.suo
 *.csproj.user
 *.vbproj.user
-ipch
+*.ipch
 *sdf
