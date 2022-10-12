@@ -12,7 +12,8 @@ void main()
 
 	allstudents.Show();
 
-	allstudents.ShowFiveBestStudents();
+	allstudents.ShowGPA();
+	
 
 		while(!kbhit());
 }

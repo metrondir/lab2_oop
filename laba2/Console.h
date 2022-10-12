@@ -7,9 +7,11 @@
 class Console
 {
 public:
+	
 	static double GetValue(std::istream& is)
 	{
-		setlocale(LC_ALL, "Ukrainian");
+		SetConsoleCP(1251);
+		SetConsoleOutputCP(1251);
 		double value;
 		while (true)
 		{
@@ -33,13 +35,15 @@ public:
 	
 static char* GetText(std::istream& is)
 {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	char* buffer = new char[255];
 	while (true)
 	{
 		setlocale(LC_ALL, "Ukrainian");
 		SetConsoleCP(1251);
 		is.getline(buffer, 255, '\n');
-		SetConsoleCP(866);
+		
 
 		if (strlen(buffer) > 0)
 		{
@@ -56,24 +60,8 @@ static char* GetText(std::istream& is)
 	is.clear();
 	return buffer;
 };
-static int* GetMasive(std::istream& is)
-{
-	setlocale(LC_ALL, "Ukrainian");
-	int* arr = new int[255];
-	int i = 0;
-	while (true)
-	{
-		
-		if (isdigit(arr[i]) < 0)
-		{
-			std::cout << "\n\tНекоректний ввід! Очікується дійсне число. Повторіть:";
-			break;
-		}
-		
-		i++;
-	}
-	return arr;
+
 };
 	
-};
+
 

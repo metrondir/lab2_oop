@@ -12,7 +12,7 @@ public:
 	void Fillstudents();
 	void Show();
 	void ShowGPA();
-	void ShowFiveBestStudents();
+	void ShowFiveBestStudents(double value[]);
 	
 };
 

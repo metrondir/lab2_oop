@@ -7,7 +7,12 @@ student::student(void)
 	setFirstName("Uknown");
 	setLastName("Uknown");
 	setNumber_of_scorebook(0);
-	setgoals(0);
+	setgoalsOOP(0);
+	setgoalsENG(0);
+	setgoalsPython(0);
+	setgoalsTZKS(0);
+	setgoalsOCH(0);
+	setgoalsMMDO(0);
 }
 
 student::~student(void)
@@ -42,13 +47,63 @@ void student::setNumber_of_scorebook(double value)
 {
 	number_of_scorebook = value;
 }
-int* student::getgoals()
+int student::getgoalsMMDO()
 {
-	return goals;
+	return studentgoals.MMDO;
 }
-void student::setgoals(int* arr)
+void student::setgoalsMMDO(int value)
 {
-	goals=arr;
+	studentgoals.MMDO=value;
+}
+
+int student::getgoalsENG()
+{
+	return studentgoals.ENG;
+}
+
+void student::setgoalsENG(int value)
+{
+	studentgoals.ENG = value;
+}
+
+int student::getgoalsOOP()
+{
+	return studentgoals.OOP;
+}
+
+void student::setgoalsOOP(int value)
+{
+	studentgoals.OOP = value;
+}
+
+int student::getgoalsOCH()
+{
+	return studentgoals.OCH;
+}
+
+void student::setgoalsOCH(int value)
+{
+	studentgoals.OCH = value;
+}
+
+int student::getgoalsPython()
+{
+	return studentgoals.Python;
+}
+
+void student::setgoalsPython(int value)
+{
+	studentgoals.Python = value;
+}
+
+int student::getgoalsTZKS()
+{
+	return studentgoals.TZKS;
+}
+
+void student::setgoalsTZKS(int value)
+{
+	studentgoals.TZKS = value;
 }
 
 
